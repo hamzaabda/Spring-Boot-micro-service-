@@ -14,7 +14,9 @@ export const environment = {
     messagingSenderId: '',
     appId: '',
     measurementId: ''
-  }
+  },
+  AUTHURL:'http://localhost:8888/auth',
+  capchaKey :"6LfkQWonAAAAAJX2RKF91qAOE0gairTk1MeAf2ti"
 };
 
 
