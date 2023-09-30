@@ -1,5 +1,6 @@
 package tn.esprit.Authentication.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,6 +15,7 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 
 
 @Entity
@@ -42,6 +44,11 @@ public class AppUser implements Serializable , UserDetails {
 
     @Enumerated(EnumType.STRING)
     private Role role;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true,fetch = FetchType.EAGER)
+    private List<EmailConfirmationToken> confirmationTokens;
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

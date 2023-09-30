@@ -9,10 +9,12 @@ import { NgxCaptchaModule } from 'ngx-captcha';
 
 import { UIModule } from '../../shared/ui/ui.module';
 import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
+import { SigninComponent } from './signin/signin.component';
 
 @NgModule({
   declarations: [
-    SignupComponent
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     CommonModule,
