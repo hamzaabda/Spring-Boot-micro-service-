@@ -13,7 +13,7 @@ export const MENU: MenuItem[] = [
         badge: {
             variant: 'info',
             text: 'MENUITEMS.DASHBOARDS.BADGE',
-        },
+        },/*
         subItems: [
             {
                 id: 3,
@@ -39,7 +39,7 @@ export const MENU: MenuItem[] = [
                 link: '/dashboards/blog',
                 parentId: 2
             },
-        ]
+        ]*/
     },
     {
         id: 7,
@@ -63,7 +63,7 @@ export const MENU: MenuItem[] = [
         link: '/chat',
         
     },
-    {
+    /*{
         id: 11,
         label: 'MENUITEMS.FILEMANAGER.TEXT',
         icon: 'bx-file',
@@ -72,10 +72,10 @@ export const MENU: MenuItem[] = [
             variant: 'success',
             text: 'MENUITEMS.FILEMANAGER.BADGE',
         },
-    },
+    },*/
     {
         id: 12,
-        label: 'MENUITEMS.ECOMMERCE.TEXT',
+        label: 'Whats new',
         icon: 'bx-store',
         subItems: [
             {
@@ -130,7 +130,7 @@ export const MENU: MenuItem[] = [
     },
     {
         id: 21,
-        label: 'MENUITEMS.CRYPTO.TEXT',
+        label: 'Exchange programs',
         icon: 'bx-bitcoin',
         subItems: [
             {
@@ -227,7 +227,7 @@ export const MENU: MenuItem[] = [
     },
     {
         id: 36,
-        label: 'MENUITEMS.INVOICES.TEXT',
+        label: 'Claims',
         icon: 'bx-receipt',
         subItems: [
             {
@@ -246,7 +246,7 @@ export const MENU: MenuItem[] = [
     },
     {
         id: 39,
-        label: 'MENUITEMS.PROJECTS.TEXT',
+        label: 'Partnerships',
         icon: 'bx-briefcase-alt-2',
         subItems: [
             {
@@ -277,7 +277,7 @@ export const MENU: MenuItem[] = [
     },
     {
         id: 44,
-        label: 'MENUITEMS.TASKS.TEXT',
+        label: 'Events',
         icon: 'bx-task',
         subItems: [
             {
@@ -302,7 +302,7 @@ export const MENU: MenuItem[] = [
     },
     {
         id: 48,
-        label: 'MENUITEMS.CONTACTS.TEXT',
+        label: 'Users',
         icon: 'bxs-user-detail',
         subItems: [
             {
@@ -374,87 +374,87 @@ export const MENU: MenuItem[] = [
                 link: '/account/login',
                 parentId: 57
             },
-            {
+            /*{
                 id: 59,
                 label: 'MENUITEMS.AUTHENTICATION.LIST.LOGIN2',
                 link: '/account/login-2',
                 parentId: 57
-            },
-            {
+            },*/
+                   {
                 id: 60,
                 label: 'MENUITEMS.AUTHENTICATION.LIST.REGISTER',
                 link: '/account/signup',
                 parentId: 57
             },
-            {
+            /*{
                 id: 61,
                 label: 'MENUITEMS.AUTHENTICATION.LIST.REGISTER2',
                 link: '/account/signup-2',
                 parentId: 57
-            },
+            },*/
             {
                 id: 62,
                 label: 'MENUITEMS.AUTHENTICATION.LIST.RECOVERPWD',
                 link: '/account/reset-password',
                 parentId: 57
             },
-            {
+            /*{
                 id: 63,
                 label: 'MENUITEMS.AUTHENTICATION.LIST.RECOVERPWD2',
                 link: '/account/recoverpwd-2',
                 parentId: 57
-            },
+            },*/
             {
                 id: 64,
                 label: 'MENUITEMS.AUTHENTICATION.LIST.LOCKSCREEN',
                 link: '/pages/lock-screen-1',
                 parentId: 57
             },
-            {
+            /*{
                 id: 65,
                 label: 'MENUITEMS.AUTHENTICATION.LIST.LOCKSCREEN2',
                 link: '/pages/lock-screen-2',
                 parentId: 57
-            },
+            },*/
             {
                 id: 66,
                 label: 'MENUITEMS.AUTHENTICATION.LIST.CONFIRMMAIL',
                 link: '/pages/confirm-mail',
                 parentId: 57
             },
-            {
+            /*{
                 id: 67,
                 label: 'MENUITEMS.AUTHENTICATION.LIST.CONFIRMMAIL2',
                 link: '/pages/confirm-mail-2',
                 parentId: 57
-            },
+            },*/
             {
                 id: 68,
                 label: 'MENUITEMS.AUTHENTICATION.LIST.EMAILVERIFICATION',
                 link: '/pages/email-verification',
                 parentId: 57
             },
-            {
+            /*{
                 id: 69,
                 label: 'MENUITEMS.AUTHENTICATION.LIST.EMAILVERIFICATION2',
                 link: '/pages/email-verification-2',
                 parentId: 57
-            },
+            },*/
             {
                 id: 70,
                 label: 'MENUITEMS.AUTHENTICATION.LIST.TWOSTEPVERIFICATION',
                 link: '/pages/two-step-verification',
                 parentId: 57
             },
-            {
+            /*{
                 id: 71,
                 label: 'MENUITEMS.AUTHENTICATION.LIST.TWOSTEPVERIFICATION2',
                 link: '/pages/two-step-verification-2',
                 parentId: 57
-            }
+            }*/
         ]
     },
-    {
+    /*
         id: 72,
         label: 'MENUITEMS.UTILITY.TEXT',
         icon: 'bx-file',
@@ -823,6 +823,6 @@ export const MENU: MenuItem[] = [
                 ]
             },
         ]
-    }
+    }*/
 ];
 

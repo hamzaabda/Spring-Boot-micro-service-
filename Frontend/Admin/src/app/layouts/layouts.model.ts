@@ -5,6 +5,6 @@ export const LAYOUT_HORIZONTAL = 'horizontal';
 
 export const LAYOUT_WIDTH = 'fluid';
 
-export const SIDEBAR_TYPE = 'dark';
+export const SIDEBAR_TYPE = 'colored';
 
 export const TOPBAR = 'dark';
