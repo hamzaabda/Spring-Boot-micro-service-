@@ -26,4 +26,14 @@ export class AuthService {
       const loginURL = this.AUTHURL+'/login';
       return this.http.post<AuthResponseData>(loginURL,LoginRequest); 
     }
+
+
+    currentuser() {
+      const currentuserURL = this.AUTHURL+'/currentuser';
+      return this.http.get<any>(currentuserURL, { withCredentials: true }); 
+    }
+
+
+    
+
 }

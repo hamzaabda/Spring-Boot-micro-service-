@@ -7,9 +7,9 @@ import tn.esprit.Authentication.Requests.AuthenticationResponse;
 import tn.esprit.Authentication.Requests.RegisterRequest;
 import tn.esprit.Authentication.entities.EmailConfirmationToken;
 
-public interface IAuthentificationService {
-    public AuthenticationResponse authenticate(AuthenticationRequest request);
-    public AuthenticationResponse register(RegisterRequest registerRequest);
-    public void confirmUser(EmailConfirmationToken confirmationToken);
-
-}
+//public interface IAuthentificationService {
+//    public AuthenticationResponse authenticate(AuthenticationRequest request);
+//    public AuthenticationResponse register(RegisterRequest registerRequest);
+//    public void confirmUser(EmailConfirmationToken confirmationToken);
+//
+//}

@@ -10,7 +10,13 @@ import {Title} from "@angular/platform-browser";
 
 import { environment } from '../../../../environments/environment';
 import { AuthService } from '../service/auth.service';
+import { SocialAuthService } from "angularx-social-login";
+import { FacebookLoginProvider,GoogleLoginProvider } from "angularx-social-login";
+import { SocialUser } from "angularx-social-login";
+import { ChangeDetectorRef } from '@angular/core';
+
 import Swal from "sweetalert2"
+import { SocialService } from '../service/social.service';
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
@@ -30,18 +36,32 @@ export class SigninComponent implements OnInit {
   // set the currenr year
   year: number = new Date().getFullYear();
 
+  
+  user: SocialUser;
+  loggedIn: boolean;
+
+
   // tslint:disable-next-line: max-line-length
 
   constructor(private formBuilder: FormBuilder, private route: ActivatedRoute, private router: Router, private authenticationService: AuthenticationService,
     private authFackservice: AuthfakeauthenticationService, 
-    
     private authservice:AuthService,
-    private titleService:Title) {
+    private titleService:Title, private SocialAuthService:SocialAuthService,private social:SocialService,
+    private cdr : ChangeDetectorRef
+    ) {
 
       this.titleService.setTitle("CulTechConnect |  Login");
      }
 
     ngOnInit() {
+
+      this.SocialAuthService.authState.subscribe(( user) => {
+        this.user = user;
+        this.loggedIn = (user != null);
+      });
+
+
+
       this.loginForm = this.formBuilder.group({
         username: ['', [Validators.required]],
         password: ['', [Validators.required]],
@@ -72,14 +92,7 @@ export class SigninComponent implements OnInit {
       return;
     } 
     else {
-      // if (environment.defaultauth === 'firebase') {
-      //   this.authenticationService.login(this.f.email.value, this.f.password.value).then((res: any) => {
-      //     this.router.navigate(['/dashboard']);
-      //   })
-      //     .catch(error => {
-      //       this.error = error ? error : '';
-      //     });
-      // } 
+    
         this.authservice.login(this.loginForm.value)
           .pipe(first())
           .subscribe(
@@ -139,6 +152,47 @@ export class SigninComponent implements OnInit {
       const isValid = recaptchaValue && recaptchaValue.length > 0; 
       return isValid ? null : { recaptchaInvalid: true };
     };
+  }
+
+  currentuserURL()
+  {
+      this.authservice.currentuser().subscribe(
+        (data)=> {
+          console.log(data)
+        }
+      )
+  }
+
+        signInWithGoogle(): void {
+          this.SocialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID).then(
+            data => {
+              this.social.loginWithGoogle(data.idToken).subscribe(
+                res => {
+                  console.log(res);
+                }
+              );
+            }
+          );
+        }
+
+
+      signInWithFB(): void {
+          this.SocialAuthService.signIn(FacebookLoginProvider.PROVIDER_ID).then(
+            data => {
+              this.social.loginWithFacebook(data.authToken).subscribe(
+                res => {
+                  console.log(res);
+                }
+              );
+            }
+          );
+        }
+
+  signOut(): void {
+    this.SocialAuthService.signOut();
+    this.user = null;
+    this.cdr.detectChanges();
+
   }
 
 }

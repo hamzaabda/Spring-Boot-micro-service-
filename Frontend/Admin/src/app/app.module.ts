@@ -24,6 +24,11 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ErrorInterceptor } from './core/helpers/error.interceptor';
 import { JwtInterceptor } from './core/helpers/jwt.interceptor';
 import { FakeBackendInterceptor } from './core/helpers/fake-backend';
+import { SocialAuthServiceConfig, SocialLoginModule } from 'angularx-social-login';
+import {
+  GoogleLoginProvider,
+  FacebookLoginProvider
+} from 'angularx-social-login';
 
 if (environment.defaultauth === 'firebase') {
   initFirebaseBackend(environment.firebaseConfig);
@@ -35,7 +40,10 @@ if (environment.defaultauth === 'firebase') {
 export function createTranslateLoader(http: HttpClient): any {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
 }
-
+const googleLoginOptions = {
+  scope: 'profile email',
+  plugin_name:'login' //you can use any name here
+}; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,15 +69,60 @@ export function createTranslateLoader(http: HttpClient): any {
     NgbTooltipModule,
     SharedModule,
     ScrollToModule.forRoot(),
-    NgbModule
+    NgbModule,SocialLoginModule
   ],
   bootstrap: [AppComponent],
+  // providers: [
+  //   // { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+  //   // { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+  //   // { provide: HTTP_INTERCEPTORS, useClass: FakeBackendInterceptor, multi: true },
+  //   // LoaderService,
+  //   // { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptorService, multi: true },
+  //   {
+  //     provide: 'SocialAuthServiceConfig',
+  //     useValue: {
+  //       autoLogin: false,
+  //       providers: [
+  //         {
+  //           id: GoogleLoginProvider.PROVIDER_ID,
+  //           provider: new GoogleLoginProvider('965604014795-etfe1bs6e1sl84pr4c4fjkgf43i1lbal.apps.googleusercontent.com')
+  //         },
+  //         {
+  //           id: FacebookLoginProvider.PROVIDER_ID,
+  //           provider: new FacebookLoginProvider('778001543884518')
+  //         }
+  //       ],
+  //       onError: (err) => {
+  //         console.error(err);
+  //       }
+  //     } 
+  //   }
+  // ]
+
+  
   providers: [
-    // { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-    // { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-    // { provide: HTTP_INTERCEPTORS, useClass: FakeBackendInterceptor, multi: true },
-    // LoaderService,
-    // { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptorService, multi: true },
-  ],
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              '965604014795-etfe1bs6e1sl84pr4c4fjkgf43i1lbal.apps.googleusercontent.com',googleLoginOptions
+            )
+          },
+          {
+            id: FacebookLoginProvider.PROVIDER_ID,
+            provider: new FacebookLoginProvider('778001543884518')
+          }
+        ],
+        onError: (err) => {
+          console.error(err);
+        }
+      } as SocialAuthServiceConfig,
+    }
+  ]
+  ,
 })
 export class AppModule { }

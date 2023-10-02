@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import tn.esprit.Authentication.Interface.IUserService;
 import tn.esprit.Authentication.Repository.UserAuthRepository;
 import tn.esprit.Authentication.entities.AppUser;
+import tn.esprit.Authentication.entities.UserPrincipal;
 
 import java.util.List;
 import java.util.Optional;
@@ -19,16 +20,14 @@ import java.util.Optional;
 @Service
 @Slf4j
 @AllArgsConstructor
-public class UserServiceImpl  implements UserDetailsService, IUserService {
+public class UserServiceImpl  implements UserDetailsService {
 
 
     private final UserAuthRepository userAuthRepository;
-    private final PasswordEncoder passwordEncoder;
 
 
     public AppUser createUser(AppUser user) {
 
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
         return userAuthRepository.save(user);
     }
 
@@ -57,13 +56,24 @@ public class UserServiceImpl  implements UserDetailsService, IUserService {
         return appUser.orElse(null);
     }
 
+    public Boolean ifemailExists(String email)
+    {
+            return userAuthRepository.existsByEmail(email);
+    }
+
+    public AppUser getUserByEmail(String email)
+    {
+
+        return userAuthRepository.findAppUserByEmail(email).get();
+
+    }
+
 
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        AppUser user = userAuthRepository.findAppUserByUsername(username)
-                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
-
-        return new User(user.getUsername(), user.getPassword(), user.getAuthorities());
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        AppUser user = userAuthRepository.findAppUserByEmail(email).get();
+        UserPrincipal userPrincaple = new UserPrincipal(user);
+        return userPrincaple;
     }
 }

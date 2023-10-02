@@ -16,6 +16,7 @@ export const environment = {
     measurementId: ''
   },
   AUTHURL:'http://localhost:8888/auth',
+  SOCIAL_URL : 'http://localhost:8888/auth/social/',
   capchaKey :"6LfkQWonAAAAAJX2RKF91qAOE0gairTk1MeAf2ti"
 };
 
