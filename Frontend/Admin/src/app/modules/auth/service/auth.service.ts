@@ -28,12 +28,20 @@ export class AuthService {
     }
 
 
+    getroles()
+    {      
+    
+      const RoleURL = this.AUTHURL+'/getroles';
+      return this.http.get<any>(RoleURL);
+    }
+
+
     currentuser() {
       const currentuserURL = this.AUTHURL+'/currentuser';
       return this.http.get<any>(currentuserURL, { withCredentials: true }); 
     }
 
 
-    
+
 
 }

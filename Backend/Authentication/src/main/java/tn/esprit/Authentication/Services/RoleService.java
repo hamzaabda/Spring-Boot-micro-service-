@@ -7,6 +7,7 @@ import tn.esprit.Authentication.Repository.RoleRepository;
 import tn.esprit.Authentication.entities.Role;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class RoleService {
@@ -17,6 +18,11 @@ public class RoleService {
     public List<Role> getRoles()
     {
         return roleRepository.findAll();
+    }
+
+    public Optional<Role> findbyid(Long idrole)
+    {
+        return roleRepository.findById(idrole);
     }
 
 }

@@ -7,8 +7,8 @@
               <div class="row">
                 <div class="col-7">
                   <div class="text-primary p-4">
-                    <h5 class="text-primary">Welcome Back !</h5>
-                    <p>Sign in to continue to Skote.</p>
+                    <h5 class="text-primary">Bienvenue de retour !</h5>
+                    <p>Connectez-vous pour continuer sur CulTechConnect.</p>
                   </div>
                 </div>
                 <div class="col-5 align-self-end">
@@ -32,11 +32,12 @@
                   <ngb-alert type="danger" *ngIf="error" [dismissible]="false">{{ error }}</ngb-alert>
   
                   <div class="mb-3">
-                    <label for="username">Username</label>
-                    <input type="text" formControlName="username" class="form-control" id="username" placeholder="Username"
-                      [ngClass]="{ 'is-invalid': f.username.touched && f.username.errors }" />
-                    <div *ngIf="f.username.touched && f.username.errors" class="invalid-feedback">
-                      <div *ngIf="f.username.errors.required">username est obligatoire</div>
+                    <label for="email">Email</label>
+                    <input type="email" formControlName="email" class="form-control" id="email" placeholder="email"
+                      [ngClass]="{ 'is-invalid': f.email.touched && f.email.errors }" />
+                    <div *ngIf="f.email.touched && f.email.errors" class="invalid-feedback">
+                      <div *ngIf="f.email.errors.required">email est obligatoire</div>
+                      <div *ngIf="f.email.errors.email">email non valide</div>
                     </div>
                  </div>
   
@@ -77,10 +78,10 @@
 
 
 
-                <button asyncLogin *ngIf="!loggedIn" (click)="signInWithGoogle()">Sign in with Google</button>
-
+                <!-- <button asyncLogin *ngIf="!loggedIn" (click)="signInWithGoogle()">Sign in with Google</button> -->
+<!-- 
                 <button asyncLogin *ngIf="!loggedIn" (click)="signInWithFB()">Facebook</button>
-                <button *ngIf="loggedIn"  (click)="signOut()">Log out</button>
+                <button *ngIf="loggedIn"  (click)="signOut()">Log out</button> -->
 
 
                     <!-- <div>
@@ -94,42 +95,38 @@
 
   
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="remember-check">
+                    <!-- <input class="form-check-input" type="checkbox" id="remember-check">
                     <label class="form-check-label" for="remember-check">
                         Remember me
-                    </label>
+                    </label> -->
                 </div> 
   
                   <div class="mt-3 d-grid">
-                    <button [disabled]="loginForm.invalid" class="btn btn-primary" type="submit">Log In</button>
+                    <button (click)="onSubmit()" [disabled]="loginForm.invalid" class="btn btn-primary" type="submit">Log In</button>
                   </div>
                   <div class="mt-4 text-center">
-                    <h5 class="font-size-14 mb-3">Sign in with</h5>
-  
+                    <h5 class="font-size-14 mb-3">Se connecter avec</h5>
                     <ul class="list-inline">
                       <li class="list-inline-item">
-                        <a href="javascript::void()" class="social-list-item bg-primary text-white border-primary">
-                          <i class="mdi mdi-facebook">
-                          </i>
-                        </a>
+                        <button asyncLogin *ngIf="!loggedIn" (click)="signInWithFB()" class="social-list-item bg-primary text-white border-primary">
+                          <i class="mdi mdi-facebook"></i>
+                      </button>
                       </li>
-                      <li class="list-inline-item">
+                      <!-- <li class="list-inline-item">
                         <a href="javascript::void()" class="social-list-item bg-info text-white border-info">
                           <i class="mdi mdi-twitter"></i>
                         </a>
-                      </li>
+                      </li> -->
                       <li class="list-inline-item">
-                        <a href="javascript::void()" class="social-list-item bg-danger text-white border-danger">
-                          <i class="mdi mdi-google">
-                          </i>
-                        </a>
+                        <button asyncLogin *ngIf="!loggedIn" (click)="signInWithGoogle()" class="social-list-item bg-danger text-white border-danger">
+                          <i class="mdi mdi-google"></i>
+                      </button>
                       </li>
                     </ul>
                   </div>
                   <div class="mt-4 text-center">
-                    <a routerLink="/account/reset-password" class="text-muted"><i class="mdi mdi-lock mr-1"></i> Forgot
-                      your
-                      password?</a>
+                    <a routerLink="/account/reset-password" class="text-muted"><i class="mdi mdi-lock mr-1"></i>Oublié votre mot de passe ?
+                    </a>
                   </div>
                 </form>
               </div>
@@ -137,10 +134,9 @@
             </div>
           </div>
           <div class="mt-5 text-center">
-            <p>Don't have an account ? <a routerLink="/account/signup" class="fw-medium text-primary"> Signup
-                now
+            <p>Vous n'avez pas de compte ? <a routerLink="/auth/register" class="fw-medium text-primary"> Inscrivez-vous maintenant.
               </a> </p>
-            <p>© {{year}} Skote. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
+            <p>© {{year}} CulTechConnect.  <i class="mdi mdi-heart text-danger"></i> by Worldwide Connectors</p>
           </div>
   
         </div>

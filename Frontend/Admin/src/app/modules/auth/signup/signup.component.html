@@ -142,12 +142,28 @@
     
               <div class="mb-3">
                 <label for="role" class="form-label">Role</label>
-                <select formControlName="role" class="form-select">
+                <!-- <select formControlName="role" class="form-select">
                   <option *ngFor="let roleOption of roles" [value]="roleOption">{{ roleOption.toLowerCase() }}</option>
+                </select> -->
+
+                <select formControlName="roleid" class="form-select">
+                  <ng-container *ngFor="let role of roleid">
+                    <option *ngIf="role.name !== 'ROLE_SUPERADMIN' && role.name !== 'ROLE_ADMIN'" [value]="role.id">
+                      {{ getRoleDisplayName(role.name) }}
+                    </option>
+                  </ng-container>
                 </select>
-                <div *ngIf="submitted && f.role.errors" class="invalid-feedback">
+                
+                 <!-- <select formControlName="roleid" class="form-select">
+                  <option *ngFor="let role of roleid" [value]="role.id">{{ role.name }}</option>
+                </select>
+                <div *ngIf="submitted && f && f.role && f.role.errors" class="invalid-feedback">
                   <div *ngIf="f.role.errors.required">Role is required</div>
                 </div>
+                
+                <div *ngIf="submitted && f.role.errors" class="invalid-feedback">
+                  <div *ngIf="f.role.errors.required">Role is required</div>
+                </div> -->
               </div>
 
                     <ngx-recaptcha2
@@ -163,30 +179,29 @@
                     <button [disabled]="signupForm.invalid"  class="btn btn-primary" type="submit">Register</button>
                   </div>
                   <div class="mt-4 text-center">
-                    <h5 class="font-size-14 mb-3">Sign in with</h5>
+                    <h5 class="font-size-14 mb-3">Se connecter avec</h5>
   
                     <ul class="list-inline">
                       <li class="list-inline-item">
-                        <a href="javascript::void()" class="social-list-item bg-primary text-white border-primary">
+                        <a href="/auth/login" class="social-list-item bg-primary text-white border-primary">
                           <i class="mdi mdi-facebook"></i>
                         </a>
                       </li>
-                      <li class="list-inline-item">
+                      <!-- <li class="list-inline-item">
                         <a href="javascript::void()" class="social-list-item bg-info text-white border-info">
                           <i class="mdi mdi-twitter"></i>
                         </a>
-                      </li>
+                      </li> -->
                       <li class="list-inline-item">
-                        <a href="javascript::void()" class="social-list-item bg-danger text-white border-danger">
+                        <a href="/auth/login" class="social-list-item bg-danger text-white border-danger">
                           <i class="mdi mdi-google"></i>
                         </a>
                       </li>
                     </ul>
                   </div>
                   <div class="mt-4 text-center">
-                    <p class="mb-0">By registering you agree to the Skote <a href="javascript: void(0);"
-                        class="text-primary">Terms of
-                        Use</a></p>
+                    <p class="mb-0">En vous inscrivant, vous acceptez les Conditions d'utilisation de CulTechConnect <a href="javascript: void(0);"
+                        class="text-primary">Conditions d'utilisation</a></p>
                   </div>
                 </form>
               </div>
@@ -195,9 +210,9 @@
           <!-- end card -->
   
           <div class="mt-5 text-center">
-            <p>Already have an account ? <a routerLink="/account/login" class="fw-medium text-primary"> Login</a>
+            <p>Vous avez déjà un compte ? <a routerLink="/auth/login" class="fw-medium text-primary"> Connexion</a>
             </p>
-            <p>© {{year}} Skote. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
+            <p>© {{year}} CulTechConnect. <i class="mdi mdi-heart text-danger"></i>  by Worldwide Connectors</p>
           </div>
         </div> <!-- end col -->
       </div>

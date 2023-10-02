@@ -1,5 +1,5 @@
 export class LoginRequest
 {
-    username:string;
+    email:string;
     password:string;
 }

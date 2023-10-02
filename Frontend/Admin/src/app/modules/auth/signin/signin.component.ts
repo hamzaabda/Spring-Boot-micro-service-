@@ -63,7 +63,7 @@ export class SigninComponent implements OnInit {
 
 
       this.loginForm = this.formBuilder.group({
-        username: ['', [Validators.required]],
+        email: ['', [Validators.required,Validators.email]],
         password: ['', [Validators.required]],
         recaptcha: ['', [Validators.required , this.recaptchaValidator()]]
       });
@@ -97,7 +97,6 @@ export class SigninComponent implements OnInit {
           .pipe(first())
           .subscribe(
             (data) => {
-
               if(data.successmessage === "Authentification Successful")
               {
                 setTimeout(() => {
@@ -118,9 +117,9 @@ export class SigninComponent implements OnInit {
               this.error = "Compte desactivé , Confirmer votre email pour continuer ou contacter un administrateur"
              }
 
-            if(data.errormessage === "Username Not found")
+            if(data.errormessage === "User With this Email Not found")
             {
-              this.error = "Utilisateur n existe pas"
+              this.error = "Utilisateur avec ce email n existe pas"
             }
 
            if(data.errormessage === "Invalid credentials")
@@ -134,6 +133,7 @@ export class SigninComponent implements OnInit {
        
               this.error = error ? error : '';
             });
+
             
     }
   }
@@ -168,7 +168,30 @@ export class SigninComponent implements OnInit {
             data => {
               this.social.loginWithGoogle(data.idToken).subscribe(
                 res => {
-                  console.log(res);
+                  if(res.successmessage === "Authentification Successful")
+                  {
+                    setTimeout(() => {
+                      Swal.fire({
+                          title: "Success!",
+                          text: "Authentification Reussite",
+                          icon: "success",
+                          timer: 3000, 
+                          showConfirmButton: false
+                      });
+             
+                      this.router.navigate(['/dashboard']);
+                  }, 3000);
+                 }
+                    if(res.errormessage === "Invalid credentials")
+                    {
+
+                      this.error = "Vous Avez deja un compte normal"
+
+                    }
+                  console.log(res)
+                },
+                error => {
+                  this.error = error ? error : '';
                 }
               );
             }
@@ -181,7 +204,24 @@ export class SigninComponent implements OnInit {
             data => {
               this.social.loginWithFacebook(data.authToken).subscribe(
                 res => {
-                  console.log(res);
+                  if(res.successmessage === "Authentification Successful")
+                  {
+                    setTimeout(() => {
+                      Swal.fire({
+                          title: "Success!",
+                          text: "Authentification Reussite",
+                          icon: "success",
+                          timer: 3000, 
+                          showConfirmButton: false
+                      });
+             
+                      this.router.navigate(['/dashboard']);
+                  }, 3000);
+                 }
+                 
+                },
+                error => {
+                  this.error = error ? error : '';
                 }
               );
             }

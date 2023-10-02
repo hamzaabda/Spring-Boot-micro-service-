@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { AuthenticationService } from '../../../core/services/auth.service';
 import { environment } from '../../../../environments/environment';
-import { first } from 'rxjs/operators';
 import { AuthService } from '../service/auth.service';
 import Swal from 'sweetalert2';
 import { ChangeDetectorRef } from '@angular/core';
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-signup',
@@ -23,7 +23,11 @@ export class SignupComponent implements OnInit {
   submitted = false;
   error = '';
   successmsg: boolean = false;
-  roles = ['PARTICIPANT', 'ORGANISATEUR', 'PARTENAIRE']; 
+
+
+  roleid: any[] = [];
+  selectedRole: number | null = null;
+
   capchaKey = environment.capchaKey;
   passwordControl: AbstractControl;
   confirmPasswordControl: AbstractControl;
@@ -35,9 +39,21 @@ export class SignupComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, 
     private route: ActivatedRoute, private router: Router, 
     private authenticationService: AuthenticationService,
-    private authservice :AuthService,private cd: ChangeDetectorRef) { }
+    private authservice :AuthService,private cd: ChangeDetectorRef,
+    private titleService:Title) { }
 
   ngOnInit() {
+    
+    this.titleService.setTitle("CulTechConnect |  Register");
+
+
+    this.authservice.getroles().subscribe((data: any) => {
+      this.roleid = data.map((role: any) => ({
+        id: role.id,
+        name: role.nameRole,
+      }));
+    });
+
 
     const passwordRegexPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[a-zA-Z]).{8,}$/;
 
@@ -48,7 +64,7 @@ export class SignupComponent implements OnInit {
       confirmPassword: ['', Validators.required],
       firstname : ['', Validators.required],
       lastname : ['', Validators.required],
-      role: ['', Validators.required],
+      roleid: ['', Validators.required],
       recaptcha: ['', [Validators.required , this.recaptchaValidator()]]
     });
 
@@ -87,6 +103,7 @@ export class SignupComponent implements OnInit {
     //       });
     //   }    
     else {
+     console.log(this.signupForm.value) 
       this.authservice.register(this.signupForm.value)
         .subscribe(
           (data) => {
@@ -101,7 +118,7 @@ export class SignupComponent implements OnInit {
                 confirmButtonText: 'D\'accord'
               })
               setTimeout(() => {
-                this.router.navigate(['/account/login']);
+                this.router.navigate(['/auth/login']);
               }, 3000);
             }
             else 
@@ -185,7 +202,18 @@ export class SignupComponent implements OnInit {
       };
     }
 
-  
+    getRoleDisplayName(roleName: string): string {
+      switch (roleName) {
+        case 'ROLE_PARTICIPANT':
+          return 'Participant';
+        case 'ROLE_ORGANISATEUR':
+          return 'Organisateur';
+        case 'ROLE_PARTENAIRE':
+          return 'Partenaire';
+        default:
+          return roleName; // Use the original roleName if not found in the mapping
+      }
+    }
 
   }
 

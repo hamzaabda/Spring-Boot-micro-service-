@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import tn.esprit.Authentication.entities.Role;
 
 @Data
 @Builder
@@ -17,4 +18,5 @@ public class RegisterRequest {
     private String username;
     private String password;
     private Boolean isenabled;
+    private Long roleid;
 }

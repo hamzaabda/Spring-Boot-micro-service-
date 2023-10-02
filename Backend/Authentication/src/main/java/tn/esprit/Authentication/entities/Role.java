@@ -1,6 +1,7 @@
 package tn.esprit.Authentication.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -24,6 +25,7 @@ public class Role {
     @Column(name="role_name")
     private String nameRole;
 
+    @JsonIgnore
     @ManyToMany(mappedBy = "roles")
     private Set<AppUser> appusers = new HashSet<>();
 
