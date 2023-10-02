@@ -42,6 +42,9 @@ public class AuthService {
     @Autowired
     private RoleService roleService;
 
+    @Autowired
+    private EmailSenderService emailSenderService;
+
     public AuthService(TokenService tokenService, UserAuthRepository userAuthRepository, AuthenticationManager authenticationManager, EmailConfirmationTokenService emailConfirmationTokenService) {
         this.tokenService = tokenService;
         this.userAuthRepository = userAuthRepository;
@@ -147,16 +150,16 @@ public class AuthService {
             );
             emailConfirmationTokenService.saveConfirmationToken(confirmationToken);
 
-//            String link = "http://localhost:8888/auth/confirm?token=" + token;
-//            emailSenderService.send(
-//                    registerRequest.getEmail(),
-//                    "Confirmer votre Courriel.",
-//                    emailSenderService.buildEmailWithLogo(
-//                            appuser.getUsername(),
-//                            "Merci de vous être inscrit. Veuillez cliquer sur le lien ci-dessous pour activer votre compte:",
-//                            link
-//                    )
-//            );
+            String link = "http://localhost:9000/authentication-service/auth/confirm?token=" + token;
+            emailSenderService.send(
+                    registerRequest.getEmail(),
+                    "Confirmer votre Courriel.",
+                    emailSenderService.buildEmailWithLogo(
+                            appuser.getEmail(),
+                            "Merci de vous être inscrit. Veuillez cliquer sur le lien ci-dessous pour activer votre compte:",
+                            link
+                    )
+            );
 
             return AuthenticationResponse.builder()
                     .successmessage("registration successful")

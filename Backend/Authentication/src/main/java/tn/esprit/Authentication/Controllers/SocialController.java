@@ -32,7 +32,6 @@ import java.util.List;
 @RequestMapping("/social")
 @RestController
 @Slf4j
-@CrossOrigin("http://localhost:4300/")
 public class SocialController {
 
     @Value("${google.id}")

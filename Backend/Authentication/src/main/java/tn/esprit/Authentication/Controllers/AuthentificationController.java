@@ -10,11 +10,14 @@ import tn.esprit.Authentication.Requests.AuthenticationRequest;
 import tn.esprit.Authentication.Requests.AuthenticationResponse;
 import tn.esprit.Authentication.Requests.RegisterRequest;
 import tn.esprit.Authentication.Services.AuthService;
+import tn.esprit.Authentication.Services.EmailConfirmationTokenService;
+import tn.esprit.Authentication.entities.EmailConfirmationToken;
+
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/")
 @Slf4j
-@CrossOrigin("http://localhost:4300/")
 public class AuthentificationController {
 
 
@@ -22,6 +25,8 @@ public class AuthentificationController {
     @Autowired
     private AuthService authService;
 
+    @Autowired
+    private EmailConfirmationTokenService emailConfirmationTokenService;
 
 
     @PostMapping("/login")
@@ -34,4 +39,15 @@ public class AuthentificationController {
 
         return ResponseEntity.ok(authService.register(request));
     }
+
+
+    @GetMapping("/confirm")
+    public void confirmUser(@RequestParam("token") String token) {
+        Optional<EmailConfirmationToken> confirmationToken = emailConfirmationTokenService.getByToken(token);
+
+
+        authService.confirmUser(confirmationToken.get());
+
+    }
+
 }
