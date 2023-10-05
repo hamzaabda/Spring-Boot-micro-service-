@@ -35,3 +35,31 @@
 ##    hostname: localhost
 #
 #
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: authentication-route
+          uri: lb://AUTHENTICATION-SERVICE
+          predicates:
+            - Path=/auth/**
+          filters:
+            - AuthenticationFilter
+
+        - id: user-route
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/api/user/**
+          filters:
+            - AuthenticationFilter
+
+  application:
+    name: api-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 9000

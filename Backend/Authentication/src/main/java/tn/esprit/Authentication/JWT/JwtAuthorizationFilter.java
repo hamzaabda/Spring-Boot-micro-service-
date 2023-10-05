@@ -1,6 +1,7 @@
 package tn.esprit.Authentication.JWT;
 
-import com.auth0.jwt.JWT;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -18,7 +19,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-import static com.auth0.jwt.algorithms.Algorithm.HMAC512;
 
 
 public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
@@ -57,10 +57,7 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
 
         if (token != null) {
             // parse the token and validate it
-            String email = JWT.require(HMAC512(JwtProperties.SECRET.getBytes()))
-                    .build()
-                    .verify(token)
-                    .getSubject();
+            String email = getEmailFromToken(token);
 
             // Search in the DB if we find the user by token subject (username)
             // If so, then grab user details and create spring auth token using username, pass, authorities/roles
@@ -73,5 +70,15 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
             return null;
         }
         return null;
+    }
+
+    private String getEmailFromToken(String token) {
+        Claims claims = Jwts.parserBuilder()
+                .setSigningKey(JwtProperties.SECRET.getBytes()) // Use your secret key
+                .build()
+                .parseClaimsJws(token)
+                .getBody();
+
+        return claims.getSubject();
     }
 }

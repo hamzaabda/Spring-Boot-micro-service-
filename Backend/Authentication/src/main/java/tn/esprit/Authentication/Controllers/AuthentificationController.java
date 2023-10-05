@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
+import tn.esprit.Authentication.JWT.TokenService;
 import tn.esprit.Authentication.Requests.AuthenticationRequest;
 import tn.esprit.Authentication.Requests.AuthenticationResponse;
 import tn.esprit.Authentication.Requests.RegisterRequest;
@@ -21,7 +22,8 @@ import java.util.Optional;
 public class AuthentificationController {
 
 
-
+    @Autowired
+    private TokenService tokenService;
     @Autowired
     private AuthService authService;
 
@@ -48,6 +50,13 @@ public class AuthentificationController {
 
         authService.confirmUser(confirmationToken.get());
 
+    }
+
+
+    @GetMapping("/validate")
+    public String  validateToken(@RequestParam("token") String token) {
+        tokenService.validateToken(token);
+        return "Token is valid";
     }
 
 }
