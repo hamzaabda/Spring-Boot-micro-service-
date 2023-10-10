@@ -38,6 +38,7 @@ public class AppUser implements Serializable {
 
     private Boolean isEnabled ;
 
+    private String profileimageurl;
 
 
     @ManyToMany(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.REFRESH,CascadeType.REMOVE},

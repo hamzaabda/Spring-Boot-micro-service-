@@ -15,6 +15,7 @@ import org.springframework.social.facebook.api.Facebook;
 import org.springframework.social.facebook.api.User;
 import org.springframework.social.facebook.api.impl.FacebookTemplate;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 import tn.esprit.Authentication.DTO.TokenDTO;
 import tn.esprit.Authentication.JWT.TokenService;
 import tn.esprit.Authentication.Requests.AuthenticationRequest;
@@ -28,6 +29,7 @@ import tn.esprit.Authentication.entities.Role;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 @RequestMapping("/social")
 @RestController
@@ -52,6 +54,8 @@ public class SocialController {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    @Autowired
+    private RestTemplate restTemplate;
 
     // http://localhost:8888/auth/api/google
 
@@ -69,6 +73,10 @@ public class SocialController {
         GoogleIdToken.Payload payload = googleIdToken.getPayload();
 
         String emailgoogle = payload.getEmail();
+        String profilePictureUrl = (String) payload.get("picture");
+        String firstName = (String) payload.get("given_name");
+        String lastName = (String) payload.get("family_name");
+
         AppUser user = new AppUser();
         if(userService.ifemailExists(emailgoogle))
         {
@@ -76,7 +84,13 @@ public class SocialController {
             log.info("========> Email Exists");
 
         } else{
-            user = createUser(emailgoogle);
+            user = createUser(emailgoogle,firstName,lastName,profilePictureUrl,firstName+lastName);
+            user.setProfileimageurl(profilePictureUrl);
+            restTemplate.postForEntity(
+                    "http://localhost:9000/api/user/adherant/CreateUser",
+                    user,
+                    AppUser.class
+            );
             log.info("========> Email Dont Exist");
 
         }
@@ -102,9 +116,27 @@ public class SocialController {
         Facebook facebook = new FacebookTemplate(tokenDTO.getToken());
         String [] data = {"email","name","picture","birthday","cover"};
 
+
         User user = facebook.fetchObject("me",User.class,data);
 
+        Map<String, Object> extraData = user.getExtraData();
+
+        Map<String, Object> pictureData = (Map<String, Object>) extraData.get("picture");
+        Map<String, Object> pictureUrlData = (Map<String, Object>) pictureData.get("data");
+        String profilePictureUrl = (String) pictureUrlData.get("url");
+
+
+
+        log.info(profilePictureUrl);
         String emailFacebook = user.getEmail();
+
+        String nameFacebook = user.getName();
+
+        String[] parts = nameFacebook.split(" ");
+
+        String firstnamefacebook = parts[0];
+        String lastnamefacebook = parts[1];
+
 
         AppUser userfacebook = new AppUser();
 
@@ -114,8 +146,14 @@ public class SocialController {
             log.info("========> Email Exists");
 
         } else{
-            userfacebook = createUser(emailFacebook);
+            userfacebook = createUser(emailFacebook,firstnamefacebook,lastnamefacebook,profilePictureUrl,nameFacebook);
+
             log.info("========> Email Dont Exist");
+            restTemplate.postForEntity(
+                    "http://localhost:9000/api/user/adherant/CreateUser",
+                    userfacebook,
+                    AppUser.class
+            );
 
         }
 
@@ -131,12 +169,17 @@ public class SocialController {
     }
 
 
-    private AppUser createUser(String email)
+    private AppUser createUser(String email,String nom,String prenom,String profilepicURL,String username)
     {
         AppUser user = new AppUser();
         user.setEmail(email);
+        user.setUsername(username);
+        user.setNom(nom);
+        user.setPrenom(prenom);
+        user.setProfileimageurl(profilepicURL);
         user.setPassword(passwordEncoder.encode(password));
         user.setIsEnabled(true);
+
         List<Role> roles = roleService.getRoles();
         ///Le 1 er role dans la DB PARTICIPANT
         user.getRoles().add(roles.get(0));

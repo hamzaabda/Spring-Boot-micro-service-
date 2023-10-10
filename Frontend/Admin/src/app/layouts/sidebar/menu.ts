@@ -300,27 +300,52 @@ export const MENU: MenuItem[] = [
             }
         ]
     },
+    // {
+    //     id: 48,
+    //     label: 'Users',
+    //     icon: 'bxs-user-detail',
+    //     subItems: [
+    //         {
+    //             id: 49,
+    //             label: 'MENUITEMS.CONTACTS.LIST.USERGRID',
+    //             link: '/contacts/grid',
+    //             parentId: 48
+    //         },
+    //         {
+    //             id: 50,
+    //             label: 'MENUITEMS.CONTACTS.LIST.USERLIST',
+    //             link: '/contacts/list',
+    //             parentId: 48
+    //         },
+    //         {
+    //             id: 51,
+    //             label: 'MENUITEMS.CONTACTS.LIST.PROFILE',
+    //             link: '/contacts/profile',
+    //             parentId: 48
+    //         }
+    //     ]
+    // },
     {
         id: 48,
         label: 'Users',
         icon: 'bxs-user-detail',
         subItems: [
-            {
-                id: 49,
-                label: 'MENUITEMS.CONTACTS.LIST.USERGRID',
-                link: '/contacts/grid',
-                parentId: 48
-            },
+            // {
+            //     id: 49,
+            //     label: 'MENUITEMS.CONTACTS.LIST.USERGRID',
+            //     link: '/contacts/grid',
+            //     parentId: 48
+            // },
             {
                 id: 50,
                 label: 'MENUITEMS.CONTACTS.LIST.USERLIST',
-                link: '/contacts/list',
+                link: '/users/list',
                 parentId: 48
             },
             {
                 id: 51,
                 label: 'MENUITEMS.CONTACTS.LIST.PROFILE',
-                link: '/contacts/profile',
+                link: '/users/profile',
                 parentId: 48
             }
         ]
@@ -749,7 +774,7 @@ export const MENU: MenuItem[] = [
                 parentId: 113
             }
         ]
-    },
+    },*/
     {
         id: 118,
         label: 'MENUITEMS.ICONS.TEXT',
@@ -823,6 +848,6 @@ export const MENU: MenuItem[] = [
                 ]
             },
         ]
-    }*/
+    }
 ];
 

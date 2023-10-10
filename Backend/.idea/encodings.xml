@@ -3,11 +3,27 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Authentication/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Authentication/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Chat/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Chat/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Eureka/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/UserManagement/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/UserManagement/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/api-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/api-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blog/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blog/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/evenement/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/evenement/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/notification/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/notification/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/partenariat/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/partenariat/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/programmeechange/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/programmeechange/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rating/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rating/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/reclamation/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/reclamation/src/main/resources" charset="UTF-8" />
   </component>
 </project>

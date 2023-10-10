@@ -12,7 +12,8 @@ export class AuthService {
 
   private AUTHURL: string;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+    ) {
       this.AUTHURL = environment.AUTHURL;
     }
 
@@ -36,10 +37,12 @@ export class AuthService {
     }
 
 
-    currentuser() {
-      const currentuserURL = this.AUTHURL+'/currentuser';
-      return this.http.get<any>(currentuserURL, { withCredentials: true }); 
+    getuserbyemail(email:string) 
+    {
+      const currentuserURL = 'http://localhost:9000/api/user/adherant/getuserbyemail/'+email;
+      return this.http.get<any>(currentuserURL); 
     }
+
 
 
 

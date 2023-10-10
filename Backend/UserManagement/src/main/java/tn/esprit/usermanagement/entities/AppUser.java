@@ -1,13 +1,13 @@
 package tn.esprit.usermanagement.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -34,6 +34,8 @@ public class AppUser implements Serializable {
 
     private Boolean isEnabled ;
 
+    private String profileimageurl;
+
     @Temporal(TemporalType.DATE)
     private Date birthdate;
 
@@ -43,6 +45,8 @@ public class AppUser implements Serializable {
 
     private String userimage;
 
+
+    @OnDelete(action = OnDeleteAction.CASCADE)
     @ManyToMany(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.REFRESH,CascadeType.REMOVE},
             fetch = FetchType.EAGER)
     @JoinTable(

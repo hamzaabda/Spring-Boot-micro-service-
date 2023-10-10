@@ -3,6 +3,7 @@ package tn.esprit.Authentication.Services;
 import lombok.var;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.IncorrectResultSizeDataAccessException;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -23,12 +24,15 @@ import javax.persistence.EntityNotFoundException;
 import javax.persistence.NonUniqueResultException;
 import java.time.LocalDateTime;
 import java.util.*;
+import org.springframework.web.client.RestTemplate;
 
 
 @Service
 
 public class AuthService {
 
+    @Autowired
+    private RestTemplate template;
 
     private final TokenService tokenService;
     private final UserAuthRepository userAuthRepository;
@@ -140,6 +144,12 @@ public class AuthService {
                     .roles(new HashSet<>(Collections.singletonList(selectedRole)))
                     .build();
             userAuthRepository.save(appuser);
+
+            template.postForEntity(
+                    "http://localhost:9000/api/user/adherant/CreateUser",
+                    appuser,
+                    AppUser.class
+            );
 
             String token = UUID.randomUUID().toString();
             EmailConfirmationToken confirmationToken = new EmailConfirmationToken(

@@ -3,8 +3,9 @@ import { emailSentBarChart, monthlyEarningChart } from './data';
 import { ChartType } from './dashboard.model';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { EventService } from '../../../core/services/event.service';
-
+// import jwt_decode from "jwt-decode";
 import { ConfigService } from '../../../core/services/config.service';
+import { AuthService } from 'src/app/modules/auth/service/auth.service';
 
 @Component({
   selector: 'app-default',
@@ -13,6 +14,7 @@ import { ConfigService } from '../../../core/services/config.service';
 })
 export class DefaultComponent implements OnInit {
 
+  connecteduser:any
   isVisible: string;
 
   emailSentBarChart: ChartType;
@@ -23,11 +25,43 @@ export class DefaultComponent implements OnInit {
   isActive: string;
 
   @ViewChild('content') content;
-  constructor(private modalService: NgbModal, private configService: ConfigService, private eventService: EventService) {
+  constructor(private modalService: NgbModal,
+     private configService: ConfigService,
+      private eventService: EventService,
+      private authservice:AuthService
+      ) {
   }
 
   ngOnInit() {
 
+    // const access_token  = localStorage.getItem('access_token');
+    // const refresh_token = localStorage.getItem('refresh_token');
+    // interface DecodedToken {
+    //   sub: string;
+    //   Role: string; 
+    //   exp : string;
+    //   iat: string;
+    // }
+    //   const decoded: DecodedToken = jwt_decode(access_token);
+    //   const sub = decoded.sub;
+    //   const roles = decoded.Role;
+    //   const exp = decoded.exp;
+    //   const iat = decoded.iat;
+    //   console.log(sub + roles + exp + iat);
+    //   this.authservice.getuserbyemail(sub).subscribe(
+    //     (data) => {
+
+    //       this.connecteduser = data
+    //       console.log(data.id)
+    //       console.log(data.username)
+    //       console.log(data.email)
+    //       console.log(data.nom)
+    //       console.log(data.prenom)
+    //       console.log(data.isEnabled)
+    //     }
+
+    //   );
+   
     /**
      * horizontal-vertical layput set
      */

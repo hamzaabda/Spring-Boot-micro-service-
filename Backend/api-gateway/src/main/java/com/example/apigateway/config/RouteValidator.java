@@ -16,7 +16,10 @@ public class RouteValidator {
             "/auth/login",
             "/eureka",
             "/auth/social/google",
-            "/auth/social/facebook"
+            "/auth/social/facebook",
+            "/auth/getroles",
+            "/adherant/CreateUser",
+            "/api/user/adherant/getuserbyemail/"
     );
 
 

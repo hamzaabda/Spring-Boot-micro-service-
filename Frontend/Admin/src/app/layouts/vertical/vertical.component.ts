@@ -4,6 +4,8 @@ import { Router, NavigationEnd } from '@angular/router';
 import { EventService } from '../../core/services/event.service';
 
 import { SIDEBAR_TYPE } from "../layouts.model";
+// import jwt_decode from "jwt-decode";
+import { AuthService } from 'src/app/modules/auth/service/auth.service';
 
 @Component({
   selector: 'app-vertical',
@@ -15,11 +17,12 @@ import { SIDEBAR_TYPE } from "../layouts.model";
  * Vertical component
  */
 export class VerticalComponent implements OnInit, AfterViewInit {
+  connecteduser : any
 
   isCondensed = false;
   sidebartype: string;
 
-  constructor(private router: Router, private eventService: EventService) {
+  constructor(private router: Router, private eventService: EventService,private AuthService:AuthService) {
     this.router.events.forEach((event) => {
       if (event instanceof NavigationEnd) {
         document.body.classList.remove('sidebar-enable');
@@ -28,6 +31,35 @@ export class VerticalComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
+
+    // const access_token  = localStorage.getItem('access_token');
+    // const refresh_token = localStorage.getItem('refresh_token');
+    // interface DecodedToken {
+    //   sub: string;
+    //   Role: string; 
+    //   exp : string;
+    //   iat: string;
+    // }
+    //   const decoded: DecodedToken = jwt_decode(access_token);
+    //   const sub = decoded.sub;
+    //   const roles = decoded.Role;
+    //   const exp = decoded.exp;
+    //   const iat = decoded.iat;
+    //   console.log(sub + roles + exp + iat);
+    //   this.AuthService.getuserbyemail(sub).subscribe(
+    //     (data) => {
+
+    //       this.connecteduser = data
+    //       console.log(data.id)
+    //       console.log(data.username)
+    //       console.log(data.email)
+    //       console.log(data.nom)
+    //       console.log(data.prenom)
+    //       console.log(data.isEnabled)
+    //     }
+
+    //   );
+
     this.sidebartype = SIDEBAR_TYPE;
     // listen to event and change the layout, theme, etc
     this.eventService.subscribe('changeSidebartype', (layout) => {

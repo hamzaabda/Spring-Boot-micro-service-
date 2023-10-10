@@ -10,6 +10,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 import { SharedModule } from './cyptolanding/shared/shared.module';
+import {CookieService} from 'ngx-cookie-service';
 
 import { ExtrapagesModule } from './extrapages/extrapages.module';
 
@@ -29,6 +30,7 @@ import {
   GoogleLoginProvider,
   FacebookLoginProvider
 } from 'angularx-social-login';
+import { AuthInterceptor } from './modules/auth.interceptor';
 
 if (environment.defaultauth === 'firebase') {
   initFirebaseBackend(environment.firebaseConfig);
@@ -122,6 +124,17 @@ const googleLoginOptions = {
         }
       } as SocialAuthServiceConfig,
     }
+    ,CookieService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor, // Use your interceptor here
+      multi: true,
+    }
+//    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+//  { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+  // { provide: HTTP_INTERCEPTORS, useClass: FakeBackendInterceptor, multi: true },
+  //  LoaderService,
+  //  { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptorService, multi: true }
   ]
   ,
 })

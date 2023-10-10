@@ -4,10 +4,18 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
+        <option value="$PROJECT_DIR$/blog/pom.xml" />
+        <option value="$PROJECT_DIR$/Chat/pom.xml" />
         <option value="$PROJECT_DIR$/Eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/rating/pom.xml" />
+        <option value="$PROJECT_DIR$/evenement/pom.xml" />
         <option value="$PROJECT_DIR$/api-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/partenariat/pom.xml" />
+        <option value="$PROJECT_DIR$/reclamation/pom.xml" />
+        <option value="$PROJECT_DIR$/notification/pom.xml" />
         <option value="$PROJECT_DIR$/Authentication/pom.xml" />
         <option value="$PROJECT_DIR$/UserManagement/pom.xml" />
+        <option value="$PROJECT_DIR$/programmeechange/pom.xml" />
       </list>
     </option>
   </component>

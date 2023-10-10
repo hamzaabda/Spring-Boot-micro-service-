@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2bd1626f-a9bc-4879-bec2-82ef27d29fb9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/Controllers/SocialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/Controllers/SocialController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/Services/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/Services/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/entities/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/entities/AppUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/controller/AppUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/controller/AppUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/entities/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/entities/AppUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/entities/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/entities/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/repository/AppUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/repository/AppUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/services/AppUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/services/AppUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/Utils/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/Utils/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/config/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/config/AuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/config/RouteValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/config/RouteValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/footer/footer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/sidebar/menu.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/sidebar/menu.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/topbar/topbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/topbar/topbar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/topbar/topbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/topbar/topbar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/vertical/vertical.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/vertical/vertical.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/modules/auth/service/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/modules/auth/service/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/modules/auth/signin/signin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/modules/auth/signin/signin.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/dashboards/default/default.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/dashboards/default/default.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/dashboards/default/default.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/dashboards/default/default.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/vitrine/sakai-ng" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2Wa62NBizcfU4dgMQFcLAYjAfr1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "User",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "e58674979710a6719599a4bfb593f501",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.NotificationApplication">
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="api-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.apigateway.ApiGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Authentication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.Authentication.AuthenticationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="blog" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.blog.BlogApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tn.esprit.blog.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChatApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Chat" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.Chat.ChatApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Eureka" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.Eureka.EurekaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EvenementApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="evenement" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.evenement.EvenementApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tn.esprit.evenement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NotificationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="notification" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.notification.NotificationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PartenariatApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="partenariat" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.partenariat.PartenariatApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tn.esprit.partenariat.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProgrammeechangeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="programmeechange" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.programmeechange.ProgrammeechangeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RatingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="rating" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.rating.RatingApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tn.esprit.rating.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReclamationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="reclamation" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.reclamation.ReclamationApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tn.esprit.reclamation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserManagementApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="UserManagement" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.usermanagement.UserManagementApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ReclamationApplication" />
+        <item itemvalue="Spring Boot.RatingApplication" />
+        <item itemvalue="Spring Boot.PartenariatApplication" />
+        <item itemvalue="Spring Boot.EvenementApplication" />
+        <item itemvalue="Spring Boot.BlogApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2bd1626f-a9bc-4879-bec2-82ef27d29fb9" name="Changes" comment="" />
+      <created>1696958137583</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696958137583</updated>
+      <workItem from="1696958139312" duration="555000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

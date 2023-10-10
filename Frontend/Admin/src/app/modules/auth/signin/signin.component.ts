@@ -7,6 +7,7 @@ import { AuthfakeauthenticationService } from '../../../core/services/authfake.s
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 import {Title} from "@angular/platform-browser";
+import {CookieService} from 'ngx-cookie-service';
 
 import { environment } from '../../../../environments/environment';
 import { AuthService } from '../service/auth.service';
@@ -47,7 +48,8 @@ export class SigninComponent implements OnInit {
     private authFackservice: AuthfakeauthenticationService, 
     private authservice:AuthService,
     private titleService:Title, private SocialAuthService:SocialAuthService,private social:SocialService,
-    private cdr : ChangeDetectorRef
+    private cdr : ChangeDetectorRef,private cookieService: CookieService
+
     ) {
 
       this.titleService.setTitle("CulTechConnect |  Login");
@@ -94,11 +96,16 @@ export class SigninComponent implements OnInit {
     else {
     
         this.authservice.login(this.loginForm.value)
-          .pipe(first())
           .subscribe(
             (data) => {
+              
+
               if(data.successmessage === "Authentification Successful")
               {
+
+                localStorage.setItem('access_token',data.tokens.access_token)
+                localStorage.setItem('refresh_token',data.tokens.refresh_token)
+  
                 setTimeout(() => {
                   Swal.fire({
                       title: "Success!",
@@ -107,7 +114,7 @@ export class SigninComponent implements OnInit {
                       timer: 3000, 
                       showConfirmButton: false
                   });
-         
+        
                   this.router.navigate(['/dashboard']);
               }, 3000);
              }
@@ -154,22 +161,20 @@ export class SigninComponent implements OnInit {
     };
   }
 
-  currentuserURL()
-  {
-      this.authservice.currentuser().subscribe(
-        (data)=> {
-          console.log(data)
-        }
-      )
-  }
+
 
         signInWithGoogle(): void {
           this.SocialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID).then(
             data => {
               this.social.loginWithGoogle(data.idToken).subscribe(
                 res => {
+                  
+
                   if(res.successmessage === "Authentification Successful")
                   {
+                    localStorage.setItem('access_token',res.tokens.access_token)
+                    localStorage.setItem('refresh_token',res.tokens.refresh_token)
+  
                     setTimeout(() => {
                       Swal.fire({
                           title: "Success!",
@@ -178,7 +183,8 @@ export class SigninComponent implements OnInit {
                           timer: 3000, 
                           showConfirmButton: false
                       });
-             
+
+      
                       this.router.navigate(['/dashboard']);
                   }, 3000);
                  }
@@ -204,8 +210,12 @@ export class SigninComponent implements OnInit {
             data => {
               this.social.loginWithFacebook(data.authToken).subscribe(
                 res => {
+                  
                   if(res.successmessage === "Authentification Successful")
                   {
+                    
+                    localStorage.setItem('access_token',res.tokens.access_token)
+                    localStorage.setItem('refresh_token',res.tokens.refresh_token)
                     setTimeout(() => {
                       Swal.fire({
                           title: "Success!",
@@ -214,7 +224,10 @@ export class SigninComponent implements OnInit {
                           timer: 3000, 
                           showConfirmButton: false
                       });
-             
+                   
+                      this.cookieService.set('access_token',res.tokens.access_token);
+                      this.cookieService.set('refresh_token',res.tokens.refresh_token);
+
                       this.router.navigate(['/dashboard']);
                   }, 3000);
                  }

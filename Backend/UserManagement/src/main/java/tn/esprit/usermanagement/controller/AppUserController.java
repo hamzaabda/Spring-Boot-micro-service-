@@ -12,7 +12,7 @@ import tn.esprit.usermanagement.services.AppUserService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/adherant")
 @Slf4j
 public class AppUserController {
 
@@ -20,25 +20,31 @@ public class AppUserController {
     @Autowired
     private AppUserService appUserService;
 
-    @PostMapping("CreateUser")
+    @PostMapping("/CreateUser")
     public ResponseEntity<AppUser> CreateUser(@RequestBody AppUser appUser)
     {
         return new ResponseEntity<>(appUserService.CreateUser(appUser), HttpStatus.OK);
     }
 
-    @GetMapping("getusers")
+    @GetMapping("/getusers")
     public ResponseEntity<List<AppUser>> getallusers()
     {
         return new ResponseEntity<>(appUserService.getAllUsers(), HttpStatus.OK);
     }
 
-    @PutMapping("edituser")
-    public ResponseEntity<AppUser> edituser(@RequestBody AppUser appUser)
+    @GetMapping("/getuserbyemail/{email}")
+    public ResponseEntity<AppUser> getuserbyemail(@PathVariable("email")String email)
     {
-        return new ResponseEntity<>(appUserService.UpdateUser(appUser), HttpStatus.OK);
+        return new ResponseEntity<>(appUserService.findAppUserByEmail(email), HttpStatus.OK);
     }
 
-    @PutMapping("deleteuserbyid/{idUser}")
+    @PutMapping("/edituser/{userId}")
+    public ResponseEntity<AppUser> edituser(@PathVariable("userId")int UserId,@RequestBody AppUser appUser)
+    {
+        return new ResponseEntity<>(appUserService.UpdateUser(appUser,UserId), HttpStatus.OK);
+    }
+
+    @PutMapping("/deleteuserbyid/{idUser}")
     public ResponseEntity<?> edituser(@PathVariable("idUser")int idUser)
     {
         appUserService.removeUser(idUser);
