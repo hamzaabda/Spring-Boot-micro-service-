@@ -5,45 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bd1626f-a9bc-4879-bec2-82ef27d29fb9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/evenement/src/main/java/tn/esprit/evenement/controller/EventController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/evenement/src/main/java/tn/esprit/evenement/entite/Event.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/evenement/src/main/java/tn/esprit/evenement/repository/EventRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/evenement/src/main/java/tn/esprit/evenement/service/EventService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/Controllers/SocialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/Controllers/SocialController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/Services/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/Services/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/entities/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Authentication/src/main/java/tn/esprit/Authentication/entities/AppUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Authentication/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Authentication/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chat/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Chat/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserManagement/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/controller/AppUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/controller/AppUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/entities/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/entities/AppUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/entities/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/entities/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/repository/AppUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/repository/AppUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/services/AppUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/java/tn/esprit/usermanagement/services/AppUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/Utils/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/Utils/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/config/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/config/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/config/RouteValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/config/RouteValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evenement/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/evenement/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partenariat/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/partenariat/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/programmeechange/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/programmeechange/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rating/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rating/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reclamation/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reclamation/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/Admin/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/Admin/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/footer/footer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/sidebar/menu.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/sidebar/menu.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/topbar/topbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/topbar/topbar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/topbar/topbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/topbar/topbar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/vertical/vertical.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/layouts/vertical/vertical.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/modules/auth/service/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/modules/auth/service/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/modules/auth/signin/signin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/modules/auth/signin/signin.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/dashboards/default/default.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/dashboards/default/default.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/dashboards/default/default.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/dashboards/default/default.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/vitrine/sakai-ng" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/createtask/createtask.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/createtask/createtask.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/createtask/createtask.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/createtask/createtask.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Dockerfile" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -51,32 +48,46 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2Wa62NBizcfU4dgMQFcLAYjAfr1" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "User",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "e58674979710a6719599a4bfb593f501",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;User&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;e58674979710a6719599a4bfb593f501&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Spring Boot.NotificationApplication">
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.EvenementApplication">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.apigateway.ApiGatewayApplication" />
@@ -87,19 +98,6 @@
     <configuration name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Authentication" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.Authentication.AuthenticationApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="blog" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.blog.BlogApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tn.esprit.blog.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -191,13 +189,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="evenement/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="evenement/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.EvenementApplication" />
+        <item itemvalue="Docker.evenement/Dockerfile" />
         <item itemvalue="Spring Boot.ReclamationApplication" />
         <item itemvalue="Spring Boot.RatingApplication" />
         <item itemvalue="Spring Boot.PartenariatApplication" />
-        <item itemvalue="Spring Boot.EvenementApplication" />
-        <item itemvalue="Spring Boot.BlogApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -210,10 +216,48 @@
       <option name="presentableId" value="Default" />
       <updated>1696958137583</updated>
       <workItem from="1696958139312" duration="555000" />
+      <workItem from="1696977522989" duration="3143000" />
+      <workItem from="1697016393201" duration="12704000" />
+      <workItem from="1697104557147" duration="4096000" />
+      <workItem from="1697113888557" duration="604000" />
+      <workItem from="1697188510143" duration="6538000" />
+      <workItem from="1697204027994" duration="103000" />
+      <workItem from="1697204149769" duration="2507000" />
+      <workItem from="1697209837645" duration="1078000" />
+      <workItem from="1697210945973" duration="531000" />
+      <workItem from="1697215659043" duration="3000" />
+      <workItem from="1697215677365" duration="575000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework.security:spring-security-core" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.validation:jakarta.validation-api" />
+    <option featureType="dependencySupport" implementationName="java:io.projectreactor:reactor-core" />
+    <option featureType="dependencySupport" implementationName="java:javax.persistence:javax.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.cloud:spring-cloud-context" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate.validator:hibernate-validator" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
