@@ -5,28 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bd1626f-a9bc-4879-bec2-82ef27d29fb9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/evenement/src/main/java/tn/esprit/evenement/controller/EventController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/evenement/src/main/java/tn/esprit/evenement/entite/Event.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/evenement/src/main/java/tn/esprit/evenement/repository/EventRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/evenement/src/main/java/tn/esprit/evenement/service/EventService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/evenement/src/main/java/tn/esprit/evenement/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reclamation/src/main/java/tn/esprit/reclamation/controller/ReclamationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reclamation/src/main/java/tn/esprit/reclamation/entity/Reclamation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reclamation/src/main/java/tn/esprit/reclamation/repository/ReclamationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reclamation/src/main/java/tn/esprit/reclamation/service/ReclamationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Authentication/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Authentication/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chat/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Chat/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evenement/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/evenement/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partenariat/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/partenariat/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/programmeechange/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/programmeechange/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rating/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rating/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reclamation/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reclamation/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evenement/src/main/java/tn/esprit/evenement/controller/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/evenement/src/main/java/tn/esprit/evenement/controller/EventController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/createtask/createtask.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/createtask/createtask.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/createtask/createtask.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/createtask/createtask.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/createtask/event.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/createtask/event.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/createtask/event.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/createtask/event.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +25,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Dockerfile" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -66,7 +55,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;User&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;hamzaabda&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -200,8 +189,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.EvenementApplication" />
-        <item itemvalue="Docker.evenement/Dockerfile" />
         <item itemvalue="Spring Boot.ReclamationApplication" />
+        <item itemvalue="Docker.evenement/Dockerfile" />
         <item itemvalue="Spring Boot.RatingApplication" />
         <item itemvalue="Spring Boot.PartenariatApplication" />
       </list>
@@ -227,6 +216,11 @@
       <workItem from="1697210945973" duration="531000" />
       <workItem from="1697215659043" duration="3000" />
       <workItem from="1697215677365" duration="575000" />
+      <workItem from="1697216770018" duration="486000" />
+      <workItem from="1697283111150" duration="613000" />
+      <workItem from="1697362109857" duration="1455000" />
+      <workItem from="1697365641527" duration="1252000" />
+      <workItem from="1697373323058" duration="6431000" />
     </task>
     <servers />
   </component>
@@ -259,5 +253,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/reclamation/src/main/java/tn/esprit/reclamation/repository/ReclamationRepository.java</url>
+          <line>2</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

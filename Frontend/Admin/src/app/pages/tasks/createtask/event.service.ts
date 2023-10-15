@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { CustomEvent } from './event.model'; // Utilisez l'alias ici
 
 @Injectable({
   providedIn: 'root'
@@ -10,12 +11,12 @@ export class EventService {
 
   constructor(private http: HttpClient) {}
 
-  getAllEvents(): Observable<Event[]> {
-    return this.http.get<Event[]>(`${this.baseUrl}`);
+  getAllEvents(): Observable<CustomEvent[]> {
+    return this.http.get<CustomEvent[]>(`${this.baseUrl}`);
   }
 
-  createEvent(event: Event): Observable<Event> {
-    return this.http.post<Event>(`${this.baseUrl}/create`, event);
+  createEvent(event: CustomEvent): Observable<CustomEvent> {
+    return this.http.post<CustomEvent>(`${this.baseUrl}/create`, event);
   }
 
   // Ajoutez les autres méthodes pour les opérations CRUD

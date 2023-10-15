@@ -1,93 +1,59 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-
-import { taskChart, tasks } from './data';
-
-import { ChartType, Tasklist } from './list.model';
+import { CustomEvent } from './event.model';
+import { EventService } from './event.service';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
-
-/**
- * Tasks-list component
- */
 export class ListComponent implements OnInit {
+  events: CustomEvent[];
+  monthlyStatistics: any[];
+  startDate: string = '';
+  endDate: string = '';
 
-  // bread crumb items
-  breadCrumbItems: Array<{}>;
+  constructor(private eventService: EventService) {}
 
-  submitted = false;
-  formData: FormGroup;
+  ngOnInit(): void {
+    this.loadEvents();
+    this.loadMonthlyStatistics();
+  }
 
-  taskChart: ChartType;
-
-  upcomingTasks: Tasklist[];
-  inprogressTasks: Tasklist[];
-  completedTasks: Tasklist[];
-  myFiles = [];
-
-  constructor(private modalService: NgbModal, private formBuilder: FormBuilder) { }
-
-  ngOnInit() {
-    this.breadCrumbItems = [{ label: 'Tasks' }, { label: 'Task List', active: true }];
-
-    this.formData = this.formBuilder.group({
-      name: ['', [Validators.required]],
-      file: new FormControl('', [Validators.required]),
-      taskType: ['', [Validators.required]],
-      status: ['', [Validators.required]]
+  loadEvents() {
+    this.eventService.getAllEvents().subscribe((events) => {
+      this.events = events;
     });
-
-    this._fetchData();
   }
 
-  onFileChange(event) {
-    for (var i = 0; i < event.target.files.length; i++) {
-      this.myFiles.push('assets/images/users/' + event.target.files[i].name);
-    }
+  loadMonthlyStatistics() {
+    this.eventService.getMonthlyStatistics().subscribe((statistics) => {
+      this.monthlyStatistics = statistics;
+    });
   }
 
-  _fetchData() {
-    // all tasks
-    this.inprogressTasks = tasks.filter(t => t.taskType === 'inprogress');
-    this.upcomingTasks = tasks.filter(t => t.taskType === 'upcoming');
-    this.completedTasks = tasks.filter(t => t.taskType === 'completed');
-
-    this.taskChart = taskChart;
+  deleteEvent(id: number) {
+    this.eventService.deleteEvent(id).subscribe(() => {
+      this.loadEvents();
+    });
   }
 
-
-  get form() {
-    return this.formData.controls;
+  generateCSV() {
+    this.eventService.generateCSVReport().subscribe((data) => {
+      // Créez un lien pour le téléchargement du fichier
+      const blob = new Blob([data], { type: 'text/csv' });
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'event-report.csv';
+      a.click();
+      window.URL.revokeObjectURL(url);
+    });
   }
 
-  listData() {
-    if (this.formData.valid) {
-      const name = this.formData.get('name').value;
-      const status = this.formData.get('status').value;
-      const taskType = this.formData.get('taskType').value;
-      tasks.push({
-        index: tasks.length + 1,
-        name,
-        status,
-        taskType,
-        images: this.myFiles,
-        checked: true
-      })
-    }
-    this.modalService.dismissAll()
-    this._fetchData();
-    this.submitted = false;
-  }
-  /**
-   * Open modal
-   * @param content modal content
-   */
-  openModal(content: any) {
-    this.modalService.open(content, { windowClass: 'modal-holder' });
+  filterByDate() {
+    this.eventService.filterEventsByDateRange(this.startDate, this.endDate).subscribe((filteredEvents) => {
+      this.events = filteredEvents;
+    });
   }
 }

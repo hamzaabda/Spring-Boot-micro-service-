@@ -15,7 +15,7 @@ export interface Tasklist {
     index: number;
     taskType: string;
     name: string;
-    images: string[];
+    images: string[]; 
     status: string;
     checked?: boolean;
 }

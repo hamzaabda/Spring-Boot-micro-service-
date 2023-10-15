@@ -32,14 +32,11 @@ public class EventController {
     public Event createEvent(@RequestBody Event event) {
         return eventService.createEvent(event);
     }
-    @GetMapping
+    @GetMapping("/afficher")
     public List<Event> getAllEvents() {
         return eventService.getAllEvents();
     }
-    @DeleteMapping("/{id}")
-    public void deleteEvent(@PathVariable int id) {
-        eventService.deleteEvent(id);
-    }
+
     @GetMapping("/{id}")
     public Event getEventById(@PathVariable int id) {
         return eventService.getEventById(id);
@@ -51,7 +48,10 @@ public class EventController {
     public Event updateEvent(@PathVariable int id, @RequestBody Event updatedEvent) {
         return eventService.updateEvent(id, updatedEvent);
     }
-
+    @DeleteMapping("/{id}")
+    public void deleteEvent(@PathVariable int id) {
+        eventService.deleteEvent(id);
+    }
 
 
     @GetMapping("/filter-and-search")
@@ -76,11 +76,7 @@ public class EventController {
             return new ArrayList<>();
         }
     }
-    @GetMapping("/statistics/monthly")
-    public ResponseEntity<List<Object[]>> getEventCountByMonth() {
-        List<Object[]> statistics = eventService.getEventCountByMonth();
-        return new ResponseEntity<>(statistics, HttpStatus.OK);
-    }
+
 
 
     @GetMapping("/getCount")
@@ -94,6 +90,11 @@ public class EventController {
         return eventService.getEventCountAndAverage();
     }
 
+    @GetMapping("/statistics/monthly")
+    public ResponseEntity<List<Object[]>> getEventCountByMonth() {
+        List<Object[]> statistics = eventService.getEventCountByMonth();
+        return new ResponseEntity<>(statistics, HttpStatus.OK);
+    }
     @GetMapping("/generate-csv-report")
     public ResponseEntity<Resource> generateCSVReport() {
         byte[] csvReport = eventService.generateCSVReport();
