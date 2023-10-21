@@ -1,17 +1,37 @@
 <div class="content-container">
   <div class="left-column">
     <h2>Liste des événements</h2>
-    <ul>
-      <li *ngFor="let event of events" class="event-item">
-        <h3>{{ event.name }}</h3>
-        <p class="event-description">{{ event.description }}</p>
-        <p class="event-date">Début : {{ event.startDate | date }}</p>
-        <p class="event-date">Fin : {{ event.endDate | date }}</p>
-        <p class="event-location">Lieu : {{ event.location }}</p>
-        <p class="event-resources">Ressources : {{ event.resources }}</p>
-        <button (click)="deleteEvent(event.id)" class="delete-button">Supprimer</button>
-      </li>
-    </ul>
+    <table class="event-table">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Description</th>
+          <th>Début</th>
+          <th>Fin</th>
+          <th>Lieu</th>
+          <th>Ressources</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let event of events" class="event-item">
+          <td>{{ event.name }}</td>
+          <td>{{ event.description }}</td>
+          <td>{{ event.startDate | date }}</td>
+          <td>{{ event.endDate | date }}</td>
+          <td>{{ event.location }}</td>
+          <td>{{ event.resources }}</td>
+          <td>
+            <button (click)="deleteEvent(event.id)" class="custom-delete-button">
+              <i class="fas fa-trash-alt custom-icon"></i>
+            </button>
+            <button (click)="openUpdateForm(event)" class="custom-update-button">
+              <i class="fas fa-edit custom-icon"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <div class="right-column">
@@ -29,7 +49,7 @@
         <button type="submit" class="filter-button">Filtrer</button>
       </form>
     </div>
-    
+
     <div *ngIf="monthlyStatistics" class="statistics">
       <h2>Statistiques mensuelles</h2>
       <table>
@@ -50,3 +70,36 @@
     <button (click)="generateCSV()" class="csv-button">Générer un rapport CSV</button>
   </div>
 </div>
+
+<div class="update-container" *ngIf="updatedEvent">
+  <div class="update-container" *ngIf="updatedEvent">
+    <h2>Modifier l'événement</h2>
+    <form (ngSubmit)="updateEvent(updatedEvent)" #updateEventForm="ngForm">
+      <div class="form-group">
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="name" [(ngModel)]="updatedEvent.name" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" id="description" name="description" [(ngModel)]="updatedEvent.description" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="startDate">Date de début</label>
+        <input type="date" id="startDate" name="startDate" [(ngModel)]="updatedEvent.startDate" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="endDate">Date de fin</label>
+        <input type="date" id="endDate" name="endDate" [(ngModel)]="updatedEvent.endDate" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="location">Lieu</label>
+        <input type="text" id="location" name="location" [(ngModel)]="updatedEvent.location" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="resources">Ressources</label>
+        <input type="text" id="resources" name="resources" [(ngModel)]="updatedEvent.resources" class="form-control">
+      </div>
+      <button type="submit" class="update-button">Mettre à jour</button>
+    </form>
+  </div>
+  

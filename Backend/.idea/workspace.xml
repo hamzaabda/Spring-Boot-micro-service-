@@ -5,17 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bd1626f-a9bc-4879-bec2-82ef27d29fb9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/evenement/src/main/java/tn/esprit/evenement/config/CorsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reclamation/src/main/java/tn/esprit/reclamation/controller/ReclamationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reclamation/src/main/java/tn/esprit/reclamation/entity/Reclamation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reclamation/src/main/java/tn/esprit/reclamation/repository/ReclamationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reclamation/src/main/java/tn/esprit/reclamation/service/ReclamationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reclamation/src/main/java/tn/esprit/reclamation/repository/EventFeedbackRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/evenement/src/main/java/tn/esprit/evenement/controller/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/evenement/src/main/java/tn/esprit/evenement/controller/EventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/createtask/createtask.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/createtask/createtask.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/createtask/createtask.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/createtask/createtask.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/createtask/event.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/createtask/event.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/createtask/event.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/createtask/event.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reclamation/src/main/java/tn/esprit/reclamation/controller/ReclamationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reclamation/src/main/java/tn/esprit/reclamation/controller/EventFeedbackController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reclamation/src/main/java/tn/esprit/reclamation/entity/Reclamation.java" beforeDir="false" afterPath="$PROJECT_DIR$/reclamation/src/main/java/tn/esprit/reclamation/entity/EventFeedback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reclamation/src/main/java/tn/esprit/reclamation/repository/ReclamationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reclamation/src/main/java/tn/esprit/reclamation/service/ReclamationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/reclamation/src/main/java/tn/esprit/reclamation/service/EventFeedbackService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/list/list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/list/list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/list/list.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/list/list.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/list/list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/Admin/src/app/pages/tasks/list/list.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,26 +49,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;hamzaabda&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;e58674979710a6719599a4bfb593f501&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "hamzaabda",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "spring.configuration.checksum": "e58674979710a6719599a4bfb593f501",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -76,7 +81,14 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.EvenementApplication">
+  <component name="RunManager" selected="Spring Boot.ReclamationApplication">
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="api-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.apigateway.ApiGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.apigateway.ApiGatewayApplication" />
@@ -91,9 +103,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AuthenticationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Authentication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.Authentication.AuthenticationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="blog" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.blog.BlogApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ChatApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Chat" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.Chat.ChatApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChatApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Chat" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.Chat.ChatApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Eureka" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.Eureka.EurekaApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -118,9 +159,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EvenementApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="evenement" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.evenement.EvenementApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tn.esprit.evenement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NotificationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="notification" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.notification.NotificationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NotificationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="notification" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.notification.NotificationApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PartenariatApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="partenariat" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.partenariat.PartenariatApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tn.esprit.partenariat.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -145,12 +219,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProgrammeechangeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="programmeechange" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.programmeechange.ProgrammeechangeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RatingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="rating" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.rating.RatingApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tn.esprit.rating.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RatingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="rating" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.rating.RatingApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tn.esprit.rating.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReclamationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="reclamation" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.reclamation.ReclamationApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tn.esprit.reclamation.ReclamationApplication" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -178,6 +285,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserManagementApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="UserManagement" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tn.esprit.usermanagement.UserManagementApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="evenement/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="evenement/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="evenement/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -188,8 +310,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.EvenementApplication" />
         <item itemvalue="Spring Boot.ReclamationApplication" />
+        <item itemvalue="Spring Boot.EvenementApplication" />
         <item itemvalue="Docker.evenement/Dockerfile" />
         <item itemvalue="Spring Boot.RatingApplication" />
         <item itemvalue="Spring Boot.PartenariatApplication" />
@@ -221,6 +343,7 @@
       <workItem from="1697362109857" duration="1455000" />
       <workItem from="1697365641527" duration="1252000" />
       <workItem from="1697373323058" duration="6431000" />
+      <workItem from="1697793397495" duration="3926000" />
     </task>
     <servers />
   </component>
@@ -258,7 +381,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/reclamation/src/main/java/tn/esprit/reclamation/repository/ReclamationRepository.java</url>
+          <url>file://$PROJECT_DIR$/reclamation/src/main/java/tn/esprit/reclamation/repository/EventFeedbackRepository.java</url>
           <line>2</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>

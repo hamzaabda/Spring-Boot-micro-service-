@@ -38,4 +38,7 @@ export class EventService {
     // Appeler le service avec les paramètres de date
     return this.http.get<CustomEvent[]>(`${this.baseUrl}/filter-by-date`, { params });
   }
+  updateEvent(id: number, updatedEvent: CustomEvent): Observable<CustomEvent> {
+    return this.http.put<CustomEvent>(`${this.baseUrl}/${id}`, updatedEvent);
+  }
 }

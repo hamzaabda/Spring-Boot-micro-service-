@@ -10,15 +10,15 @@
         <module name="notification" />
         <module name="partenariat" />
         <module name="Authentication" />
-        <module name="Chat" />
-        <module name="rating" />
-        <module name="api-gateway" />
         <module name="UserManagement" />
-        <module name="blog" />
+        <module name="Chat" />
+        <module name="api-gateway" />
+        <module name="rating" />
         <module name="reclamation" />
+        <module name="blog" />
         <module name="Eureka" />
-        <module name="evenement" />
         <module name="programmeechange" />
+        <module name="evenement" />
       </profile>
     </annotationProcessing>
   </component>

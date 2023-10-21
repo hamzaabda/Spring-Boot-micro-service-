@@ -1,4 +1,5 @@
 /* Styles améliorés pour le composant ListComponent */
+@import '~@fortawesome/fontawesome-free/css/all.css';
 
 .content-container {
     display: flex; /* Utilisez Flexbox pour diviser en colonnes */
@@ -88,5 +89,79 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+  }
+  .content-container {
+    display: flex;
+  
+    .left-column {
+      width: 70%; // Ajustez la largeur de la colonne de gauche selon vos besoins.
+  
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+  
+      .event-table {
+        width: 100%;
+        border-collapse: collapse;
+  
+        th, td {
+          border: 1px solid #ddd;
+          padding: 8px;
+          text-align: left;
+        }
+  
+        th {
+          background-color: #f2f2f2;
+        }
+  
+        tr:nth-child(even) {
+          background-color: #f2f2f2;
+        }
+  
+        tr:nth-child(odd) {
+          background-color: #fff;
+        }
+  
+        .event-item {
+          &:hover {
+            background-color: #e0e0e0;
+          }
+        }
+  
+        .delete-button {
+          background-color: #e74c3c;
+          color: #fff;
+          padding: 6px 12px;
+          border: none;
+          cursor: pointer;
+          font-size: 0.875rem;
+          border-radius: 3px;
+  
+          &:hover {
+            background-color: #c0392b;
+          }
+        }
+      }
+    }
+  }
+  
+  .custom-delete-button {
+    background-color: #3498db; // Couleur bleue pour le bouton
+    color: #fff; // Texte en blanc
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 3px;
+  
+    &:hover {
+      background-color: #2980b9; // Couleur bleue plus foncée au survol
+    }
+  }
+  
+  .custom-icon {
+    color: blue; // Couleur bleue pour l'icône
+    margin-right: 5px;
   }
   

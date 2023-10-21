@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EventService } from './event.service';
 import { CustomEvent } from './event.model';
-
+import Swal from 'sweetalert2'
 @Component({
   selector: 'app-create-task',
   templateUrl: './createtask.component.html',
@@ -21,6 +21,13 @@ export class CreatetaskComponent implements OnInit {
     this.eventService.createEvent(eventData).subscribe((event) => {
       console.log('Événement créé avec succès:', event);
       // Vous pouvez ajouter des actions supplémentaires ici
+      Swal.fire({
+        icon: 'success',
+        title: 'Événement créé avec succès',
+        text: 'Événement créé avec succès!',
+        footer: '<a href="/tasks/list">Liste</a>'
+      })
+      
     });
   }
 }
